@@ -1,0 +1,67 @@
+/* ----- Typos ----- */
+@font-face {
+  font-family: champagne_limousines;
+  src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+/* ----- Couleurs ----- */
+.color_purple {
+  color: #6c25be;
+}
+
+.color_orange {
+  color: #D8c22d;
+}
+
+/* ----- General ----- */
+html {
+  background-color: #2587be;
+}
+
+body {
+  margin: 10px 10vw;
+  background-color: #e9f3f9;
+}
+
+/* ----- Header ----- */
+header {
+  background-color: #2587be;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #6c25be;
+}
+header h1 {
+  font-family: champagne_limousines;
+  font-size: 50px;
+  font-weight: lighter;
+}
+header a {
+  font-family: champagne_limousines;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ----- Aside ----- */
+aside {
+  width: 300px;
+  border: solid 10px #6c25be;
+  background-color: #6c25be;
+  color: white;
+}
+aside img {
+  width: 300px;
+}
+
+/* ----- Main ----- */
+/* ----- Footer ----- */
+footer {
+  background-color: #2587be;
+  padding: 10px;
+  color: #D8c22d;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  text-align: center;
+  border-top: solid 1px #6c25be;
+}/*# sourceMappingURL=style.css.map */

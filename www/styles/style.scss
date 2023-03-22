@@ -1,0 +1,74 @@
+/* ----- Typos ----- */
+@font-face {
+    font-family: champagne_limousines ;
+    src: url(../fonts/Champagne\ &\ Limousines.ttf);
+}
+/* ----- Couleurs ----- */
+$myColorOrange: #D8c22d;
+$myColorPurple: #6c25be;
+$myColorBckgrnd: #2587be;
+$myColorLight: #e9f3f9;
+.color_purple{
+color: $myColorPurple;
+}
+.color_orange{
+color: $myColorOrange;
+}
+
+/* ----- General ----- */
+html{
+    background-color: $myColorBckgrnd;
+}
+
+body{
+    margin: 10px 10vw;
+    background-color: $myColorBckgrnd;
+}
+
+/* ----- Header ----- */
+header{
+    background-color: $myColorBlue;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $myColorPurple;
+    h1{
+        font-family: champagne_limousines;
+        font-size: 50px;
+        font-weight: lighter;
+    }
+    a{
+        font-family: champagne_limousines;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+/* ----- Aside ----- */
+aside{
+    width: 300px;
+    border: solid 10px $myColorLight;
+    background-color: $myColorLight;
+    color: white;
+    img{
+        width: 300px;
+    }
+}
+
+/* ----- Main ----- */
+main{
+    
+}
+
+/* ----- Footer ----- */
+footer{
+    background-color: $myColorBlue;
+    padding: 10px;
+    color: $myColorOrange;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    text-align: center;
+    border-top: solid 1px $myColorPurple;
+}
