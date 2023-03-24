@@ -1,4 +1,5 @@
 const register_link = document.querySelector(".register_link");
+const login_link = document.querySelector(".login_link");
 const form_content = document.querySelector(".form_content");
 
     register_link.addEventListener("click", ()=>{
@@ -37,7 +38,28 @@ const form_content = document.querySelector(".form_content");
                         <button type="submit" name="registerSubmit">JE M'INSCRIT</button>
                 </form>
                 <div class="form_bottom">
-                    <a href="logPage.php" class="login_link">J'ai déja un compte</a>
+                    <button class="login_link">J'ai déja un compte</button>
                 </div>
+        `;
+    });
+
+    login_link.addEventListener("click", ()=>{
+        form_content.innerHTML=`
+        <form action="" method="POST">
+        <fieldset>
+            <legend>Adresse email</legend>
+            <input type="email" name="email" placeholder="Exemple : adresse@gmail.fr" required="">
+        </fieldset>
+        <fieldset>
+            <legend>Mot de passe</legend>
+            <input type="password" name="password" placeholder="Mot de passe">
+        </fieldset>
+        <br>
+            <button type="submit" name="logInSubmit">JE ME CONNECTE</button>
+    </form>
+    <div class="form_bottom">
+        <button class="forget">Mot de passe oublié</button>
+        <button class="register_link">Créer un compte</button>
+    </div>
         `;
     });
