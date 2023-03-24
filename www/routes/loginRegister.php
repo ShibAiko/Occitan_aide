@@ -54,8 +54,8 @@ if (isset($_POST["logInSubmit"])) {
     } else {
         //stocke les données utilisateur 
         $_SESSION['id_utilisateur'] = $utilisateur['id_utilisateur'];
-        $_SESSION['type_utilisateur'] = $user['id_type_utilisateur'];
-        $_SESSION['prenom'] = $user['prenom_utilisateur'];
+        $_SESSION['type_utilisateur'] = $utilisateur['id_type_utilisateur'];
+        $_SESSION['prenom'] = $utilisateur['prenom_utilisateur'];
         //Quitte et redirige vers la page account.php
         header('Location: account.php');
         exit;
