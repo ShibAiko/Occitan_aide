@@ -1,74 +1,142 @@
 /* ----- Typos ----- */
 @font-face {
-    font-family: champagne_limousines ;
+    font-family: champagne_limousines;
     src: url(../fonts/Champagne\ &\ Limousines.ttf);
 }
+
 /* ----- Couleurs ----- */
-$myColorOrange: #D8c22d;
-$myColorPurple: #6c25be;
-$myColorBckgrnd: #2587be;
+$myColorOrange: #ebbd34;
+$myColorPurple: #843360;
+$myColorBckgrnd: #174365;
 $myColorLight: #e9f3f9;
-.color_purple{
-color: $myColorPurple;
-}
-.color_orange{
-color: $myColorOrange;
-}
 
 /* ----- General ----- */
-html{
+* {
+    font-family: sans-serif;
+    color: $myColorLight;
+}
+
+html {
     background-color: $myColorBckgrnd;
 }
 
-body{
+body {
     margin: 10px 10vw;
     background-color: $myColorBckgrnd;
 }
 
+main{
+    min-height: 80vh;
+}
+
 /* ----- Header ----- */
-header{
-    background-color: $myColorBlue;
+header {
+    background-color: $myColorBckgrnd;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px $myColorPurple;
-    h1{
-        font-family: champagne_limousines;
-        font-size: 50px;
-        font-weight: lighter;
+    border-bottom: solid 1px $myColorOrange;
+    img {
+    height: 80px;
     }
-    a{
+    a {
         font-family: champagne_limousines;
         display: flex;
         align-items: center;
         text-decoration: none;
+        color: black;
     }
 }
 
 /* ----- Aside ----- */
-aside{
-    width: 300px;
-    border: solid 10px $myColorLight;
-    background-color: $myColorLight;
-    color: white;
-    img{
-        width: 300px;
-    }
-}
+
 
 /* ----- Main ----- */
-main{
-    
+
+
+/* ----- Formulaire ----- */
+
+.formulaire{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    *{
+        padding: 0;
+    }
+    h2{
+        color:$myColorOrange;
+        letter-spacing: 3px;
+        font-size: 40px;
+        margin: 2em;
+    }
+    .form_content{
+        width: 400px;
+        margin: 2em auto;
+        fieldset{
+            margin: auto;
+            width: 350px;
+            height: 75px;
+            border: solid 4px $myColorOrange;
+            border-radius: 10px;
+            text-align: left;
+            legend{
+                margin-left: 20px;
+                padding: 10px;
+            }
+            input{
+                width: 300px;
+                background-color: $myColorBckgrnd;
+                border: none;
+                padding-left: 10px;
+            }
+            .radio{
+                display: flex;
+                input{
+                    width: 50px;
+                }
+            }
+        }
+        form button{
+            margin: auto;
+            width: 358px;
+            height: 70px;
+            background-color: $myColorOrange;
+            border: solid 4px $myColorOrange;
+            border-radius: 10px;
+            color: $myColorBckgrnd;
+            font-size: 20px;
+            font-weight: bold;
+            &:hover{
+                background-color: $myColorPurple;
+                border-color: $myColorPurple;
+                color: $myColorLight;
+            }
+        }
+        .form_bottom{
+            margin: 2em auto;
+            width: 100%;
+            align-items: center;
+            text-decoration: underline;
+            font-size: 1em;
+
+            button{
+                background: none;
+                border: none;
+                font-size: 1em;
+            }
+        }
+    }
+
 }
 
 /* ----- Footer ----- */
-footer{
-    background-color: $myColorBlue;
+footer {
+    background-color: $myColorBckgrnd;
     padding: 10px;
     color: $myColorOrange;
     font-family: sans-serif;
     font-variant: small-caps;
     text-align: center;
-    border-top: solid 1px $myColorPurple;
+    border-top: solid 1px $myColorOrange;
 }
