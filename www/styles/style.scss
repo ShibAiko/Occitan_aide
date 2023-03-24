@@ -15,7 +15,9 @@ $myColorLight: #e9f3f9;
     font-family: sans-serif;
     color: $myColorLight;
 }
-
+.hidden{
+    display: none;
+}
 html {
     background-color: $myColorBckgrnd;
 }
@@ -70,7 +72,7 @@ header {
         font-size: 40px;
         margin: 2em;
     }
-    .form_content{
+    .form{
         width: 400px;
         margin: 2em auto;
         fieldset{

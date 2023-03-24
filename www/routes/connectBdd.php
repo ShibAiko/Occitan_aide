@@ -1,5 +1,4 @@
 <?php
-session_start();
 //Connexion à la BDD ---------------------//
 $username = "admin";
 $pass = "pass";

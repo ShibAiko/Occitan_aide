@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Création de compte ------------------- //
 if (isset($_POST["registerSubmit"])) {
 
