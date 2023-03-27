@@ -1,0 +1,41 @@
+@media screen and (max-width: 800px) {
+
+/* ----- General ----- */
+body {
+    margin: 10px;
+}
+
+/* ----- Header ----- */
+
+
+/* ----- NavBAar ----- */
+
+nav{
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        li {
+            width: auto;
+            }
+    }
+}
+
+/* ----- Aside ----- */
+
+/* ----- Main ----- */
+
+/* ----- Formulaire ----- */
+.formulaire{
+    h2{
+        margin: 1em auto;
+    }
+}
+
+/* ----- Footer ----- */
+footer {
+}
+
+
+
+}

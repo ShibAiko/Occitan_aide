@@ -1,6 +1,7 @@
 <!------------------------------------ PHP ----------------------------------------->
 <?php include "routes/connectBdd.php"?>
-<?php include "routes/loginRegister.php"?>
+<?php include "routes/login.php"?>
+<?php include "routes/register.php"?>
 <!------------------------------------ HTML ---------------------------------------->
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,14 +9,13 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles/style.css">
-    <title>logPage</title>
+    <?php include "includes/styles.html" ?>
+    <title>Page de connexion</title>
 </head>
 <body>
     <!-- Header -->
-    <?php include "includes/header.html"?>
+    <?php include "includes/header.php"?>
+    <a href="index.php"><span class="material-symbols-outlined">arrow_back</span></a>
     <main>
         <div class="formulaire">
             <h2>CONNEXION / INSCRIPTION</h2>
@@ -34,7 +34,6 @@
                         <button type="submit" name="logInSubmit">JE ME CONNECTE</button>
                 </form>
                 <div class="form_bottom">
-                    <button class="forget">Mot de passe oublié</button>
                     <button class="register_link">Créer un compte</button>
                 </div>
             </div>
@@ -70,7 +69,7 @@
                         <input type="password" name="password_verif" placeholder="confirmez le mot depasse" required="">
                     </fieldset>
                     <br>
-                        <button type="submit" name="registerSubmit">JE M'INSCRIT</button>
+                        <button type="submit" name="registerSubmit">JE M'INSCRIS</button>
                 </form>
                 <div class="form_bottom">
                     <button class="login_link">J'ai déja un compte</button>

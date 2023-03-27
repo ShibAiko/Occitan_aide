@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Ocitan'aide</title>
+    <?php include "includes/styles.html" ?>
+    <title>Accueil</title>
 </head>
-
 <body>
     <!-- Header -->
-    <?php include "includes/header.html"?>
+    <?php include "includes/header.php"?>
     <main>
         <div class="content">
 
@@ -21,7 +18,5 @@
     </main>
     <!-- Footer -->
     <?php include "includes/footer.html" ?>
-
 </body>
-
 </html>
