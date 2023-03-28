@@ -35,7 +35,7 @@
                 <div class="patientInfo">
 
                     <!-- Script display_patientInfo.js -->
-                    
+
                 </div>
                 <div class="checkPills">
                     <h3>Prise de medicament</h3> <!-- l'image check change en fonction de l'état  -->
@@ -84,6 +84,6 @@
 
 <!------------------------------------ JS ----------------------------------------->
 
-<script src="js/display_patientInfo.js"></script>
-<script src="js/display_notes.js"></script>
+<script src="js/displayDataUser.js"></script>
+<script src="js/displayNotes.js"></script>
 

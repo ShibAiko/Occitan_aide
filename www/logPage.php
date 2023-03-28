@@ -84,4 +84,4 @@
 </html>
 
 <!------------------------------------ JS ----------------------------------------->
-<script src="js/login_register.js"></script>
+<script src="js/loginRegister.js"></script>
