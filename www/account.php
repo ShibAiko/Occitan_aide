@@ -84,6 +84,6 @@
 
 <!------------------------------------ JS ----------------------------------------->
 
-<script src="js/displayDataUser.js"></script>
+<script src="js/displayDataUser.js" async></script>
 <script src="js/displayNotes.js"></script>
 

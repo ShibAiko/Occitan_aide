@@ -13,9 +13,16 @@ if (isset($id)) {
         $stmt->execute();
         // Fetch (récupère les infos de l'utilisateur qui s'est connecté correspondant a l'ID)
         $dataUser = $stmt->fetch();
-        
+
+
+
     } catch (PDOException $e) {
+        echo "Erreur de base de données : " . $e->getMessage();
     }
+    return $dataUser;
+    $dataJson = json_encode($dataUser);
+    echo $dataJson;
+
 }
 ?>
 
@@ -41,5 +48,4 @@ J'ai ça en retour -->
         "id_type_utilisateur":"2",
         "6":"2"
     }
-
- -->
+-->

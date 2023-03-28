@@ -19,4 +19,5 @@ if (isset($id)) {
     } catch (PDOException $e) {
     }
 }
+return json_encode($dataUser)
 ?>

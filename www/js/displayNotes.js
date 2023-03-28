@@ -2,7 +2,7 @@
 
     const divNotes = document.querySelector(".notes");
 
-    fetch("http://localhost:8888/Occitna_aide/www/routes/getNotes.php")
+    fetch("http://localhost:8888/Occitan_aide/www/routes/getNotes.php")
         .then(function(response) {
             return response.json();
         })

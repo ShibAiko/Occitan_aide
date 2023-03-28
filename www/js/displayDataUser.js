@@ -1,5 +1,5 @@
 /* Affichage des infos */
-    const patientResume = document.querySelector(".patientResume");
+
     const patientInfo = document.querySelector(".patientInfo");
 
     fetch("http://localhost:8888/Occitan_aide/www/routes/getDataUser.php")
@@ -15,13 +15,10 @@
                     <h3>${dataUser["prenom_utilisateur"]}</h3>
                     <a href=""><span class="material-symbols-outlined">call</span></a>    
             `; 
-        }) 
-
-
+        })
+        
 /* Si je fais à la ligne 7 un
-
 return response ;
-
 j'ai ça.  */
 
 /* 
