@@ -1,8 +1,10 @@
 <!------------------------------------ PHP ----------------------------------------->
-<?php session_start() ?>
-<?php include "routes/connectBdd.php" ?>
-<?php include "routes/getDataUser.php" ?>
-<?php include "routes/getNotes.php" ?>
+<?php
+session_start();
+include "routes/connectBdd.php";
+include "routes/getDataUser.php";
+include "routes/getNotes.php";
+?>
 
 <!------------------------------------ HTML ---------------------------------------->
 <!DOCTYPE html>
@@ -86,4 +88,3 @@
 
 <script src="js/displayDataUser.js" async></script>
 <script src="js/displayNotes.js"></script>
-
