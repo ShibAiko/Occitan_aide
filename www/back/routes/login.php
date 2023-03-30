@@ -1,4 +1,8 @@
 <?php
+// Connexion a la Bdd
+include "connectBdd.php";
+// Tableau pour stocker les erreurs
+$response = array();
 //Connexion à un compte ---------------- //
 if (isset($_POST["logInSubmit"])) {
     session_start();
@@ -13,19 +17,20 @@ if (isset($_POST["logInSubmit"])) {
     //execute
     $stmt->execute();
     //récupère de la BDD
-    $utilisateur = $stmt->fetch();
+    $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
     //Vérifie si l'utilisateur existe et si le mot de passe correspond
     if($utilisateur === false OR $utilisateur === null OR !password_verify($password, $utilisateur['password_utilisateur'])){
         //Erreur utilisateur non trouvé
-        $registerError['loginError'] = true;
+        $response["success"] = false;
+        $response["message"] = "Email ou mot de passe incorrect";
     } else {
-        //stocke les données utilisateur dans la session
-        $_SESSION['id_utilisateur'] = $utilisateur['id_utilisateur'];
-        $_SESSION['type_utilisateur'] = $utilisateur['id_type_utilisateur'];
-        $_SESSION['prenom'] = $utilisateur['prenom_utilisateur'];
-        //Quitte et redirige vers la page account.php
-        header('Location: account.php');
-        exit;
+
+        $response["success"] = true;
+        $response["message"] = "Connexion réussie";
+        $response["data_user"] = $utilisateur;
     }
 }
+// Envoie la réponse sous forme de JSON
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>

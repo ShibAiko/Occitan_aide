@@ -1,4 +1,6 @@
 <?php
+// Connexion a la Bdd
+include "connectBdd.php";
 //Création de compte ------------------- //
 if (isset($_POST["registerSubmit"])) {
 

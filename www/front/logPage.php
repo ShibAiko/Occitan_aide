@@ -16,7 +16,7 @@
     <!-- Header -->
     <?php include "includes/header.php"?>
     <a href="index.php"><span class="material-symbols-outlined">arrow_back</span></a>
-    <main>
+    <main class="mainForm">
         <div class="formulaire">
             <h2>CONNEXION / INSCRIPTION</h2>
             <div class="form login_form">
@@ -84,4 +84,4 @@
 </html>
 
 <!------------------------------------ JS ----------------------------------------->
-<script src="js/loginRegister.js"></script>
+<script src="assets/js/loginRegister.js"></script>

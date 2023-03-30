@@ -1,21 +1,17 @@
 <!------------------------------------ PHP ----------------------------------------->
 <?php
 session_start();
-include "routes/connectBdd.php";
-include "routes/getDataUser.php";
-include "routes/getNotes.php";
 ?>
 
 <!------------------------------------ HTML ---------------------------------------->
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include "includes/styles.html" ?>
-    <title>Page de <?= $_SESSION["prenom"] ?></title>
+    <?php include "includes/styles.html"?>
+    <title>Page de <?=$_SESSION["prenom"]?></title>
 </head>
 
 <body>
@@ -86,5 +82,5 @@ include "routes/getNotes.php";
 
 <!------------------------------------ JS ----------------------------------------->
 
-<script src="js/displayDataUser.js" async></script>
+<script src="js/displayDataUser.js"></script>
 <script src="js/displayNotes.js"></script>

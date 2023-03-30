@@ -46,8 +46,10 @@ header {
     img {
     height: 80px;
     }
-    a {
+    button {
         font-family: champagne_limousines;
+        background: none;
+        border: none;
         display: flex;
         align-items: center;
         text-decoration: none;
@@ -284,7 +286,6 @@ article h3{
     }
 
 /* ----- Formulaire ----- */
-
 .formulaire{
     width: auto;
     margin: auto;
@@ -358,6 +359,7 @@ article h3{
     }
 
 }
+
 
 /* ----- Footer ----- */
 footer {

@@ -1,7 +1,8 @@
 <?php 
-session_start();
-include "connectBdd.php";
+session_start(); 
+include "connectBdd.php"; 
 
+header ('content-type:application/json');
 //Récupération de l'ID de l'utilisateur connecté
 $id = $_SESSION['id_utilisateur'];
 if (isset($id)) {
@@ -18,9 +19,9 @@ if (isset($id)) {
         $dataUser = $stmt->fetch();
         // Convertir le tableau associatif en JSON
         $jsonData = json_encode($dataUser);
-        
+        echo $jsonData;
     } catch (PDOException $e) {
-        echo "Erreur de base de données : " . $e->getMessage();
+        echo json_encode(['error' => "Erreur de base de données : " . $e->getMessage()]);
         exit();
     }
 }
