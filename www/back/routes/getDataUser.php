@@ -1,7 +1,6 @@
 <?php 
 session_start(); 
 include "connectBdd.php"; 
-
 header ('content-type:application/json');
 //Récupération de l'ID de l'utilisateur connecté
 $id = $_SESSION['id_utilisateur'];

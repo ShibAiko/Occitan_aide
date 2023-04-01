@@ -3,13 +3,14 @@
 //récupère le main et le bouton de connexion
 const main = document.querySelector("main");
 const logBtn = document.querySelector("#logBtn")
+
 //écoute le bouton de connexion pour afficher le formulaire
 logBtn.addEventListener("click", () => {
     main.innerHTML = `
         <div class="formulaire">
         <h2>CONNEXION / INSCRIPTION</h2>
-        <div class="form login_form">
-            <form  method="POST" action="../back/routes/login.php">
+        <div class="form ">
+            <form class="login_form" method="POST" name="submit" action="../back/routes/login.php">
                 <fieldset>
                     <legend>Adresse email</legend>
                     <input type="email" name="email" placeholder="Exemple : adresse@gmail.fr" required="">
@@ -20,13 +21,13 @@ logBtn.addEventListener("click", () => {
                 </fieldset>
                 <br>
                     <button id="loginBtn" type="submit" name="logInSubmit">JE ME CONNECTE</button>
+                    <div class="form_bottom">
+                    <button class="register_link">Créer un compte</button>
+                </div>
             </form>
-            <div class="form_bottom">
-                <button class="register_link">Créer un compte</button>
-            </div>
         </div>
-        <div class="form register_form hidden">
-            <form method="POST" action="../back/routes/register.php" >
+        <div class="form ">
+            <form class="register_form hidden" method="POST" action="../back/routes/register.php" >
                 <fieldset>
                     <legend>Adresse email</legend>
                     <input type="email" name="email" placeholder="Exemple : adresse@gmail.fr" required="">
@@ -58,29 +59,25 @@ logBtn.addEventListener("click", () => {
                 </fieldset>
                 <br>
                     <button id="registerBtn" type="submit" name="registerSubmit">JE M'INSCRIS</button>
+                    <div class="form_bottom">
+                    <button class="login_link">J'ai déja un compte</button>
+                </div>
             </form>
-            <div class="form_bottom">
-                <button class="login_link">J'ai déja un compte</button>
-            </div>
+
         </div>
     </div>
-        `;
-// récupère les deux forulaire et le bouton pour switcher la classe ".hidden" de l'un ou l'autre
+    `;
+    // récupère les deux forulaire et le bouton pour switcher la classe ".hidden" de l'un ou l'autre
     const register_link = document.querySelector(".register_link");
     const login_link = document.querySelector(".login_link");
     const login_form = document.querySelector(".login_form");
     const register_form = document.querySelector(".register_form");
-
     register_link.addEventListener("click", () => {
         register_form.classList.toggle("hidden");
         login_form.classList.toggle("hidden");
     });
-    
     login_link.addEventListener("click", () => {
         register_form.classList.toggle("hidden");
         login_form.classList.toggle("hidden");
     });
-
-})
-
-
+});

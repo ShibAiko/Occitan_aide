@@ -7,7 +7,6 @@
 /* ----- General ----- */
 * {
   font-family: sans-serif;
-  color: #e9f3f9;
 }
 
 *:focus {
@@ -40,17 +39,19 @@ header {
   align-items: center;
   border-bottom: solid 1px #ebbd34;
 }
+header * {
+  color: #e9f3f9;
+}
 header img {
   height: 80px;
 }
-header button {
+header button, header a {
   font-family: champagne_limousines;
   background: none;
   border: none;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #e9f3f9;
   font-family: sans-serif;
 }
 
@@ -91,6 +92,10 @@ nav ul li:hover {
   background-color: #843360;
   color: #e9f3f9;
 }
+.patientResume .icon {
+  height: 40px;
+  padding: 0;
+}
 
 #addPatient {
   padding: 1em;
@@ -100,6 +105,8 @@ nav ul li:hover {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  padding: 10px 1em;
+  align-items: center;
 }
 .patientInfo .profilPic {
   width: 100px;
@@ -109,7 +116,8 @@ nav ul li:hover {
   padding: 0.5em;
 }
 .patientInfo > * {
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
 }
 .patientInfo :nth-child(1) {
   grid-column: 1;
@@ -251,25 +259,31 @@ article h3 {
   padding: 5px;
   color: black;
 }
-
 .notes > * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.whoWrote {
+.notes .whoWrote {
   color: #843360;
   font-weight: normal;
+}
+.notes .textNote {
+  padding-right: 1em;
+}
+.notes .delete {
+  margin: 0;
+  float: right;
+}
+.notes .delete:hover {
+  color: red;
 }
 
 #notesContainer form {
   display: flex;
   flex-direction: column;
 }
-
 #notesContainer form * {
   margin: 0.5em;
 }
-
 #notesContainer form input {
   background-color: #843360;
   color: #e9f3f9;
@@ -285,6 +299,7 @@ article h3 {
 }
 .formulaire * {
   padding: 0;
+  color: #e9f3f9;
 }
 .formulaire h2 {
   color: #ebbd34;
@@ -314,6 +329,7 @@ article h3 {
   background-color: #174365;
   border: none;
   padding-left: 10px;
+  border-radius: 10px;
 }
 .formulaire .form fieldset .radio {
   display: flex;
@@ -321,7 +337,8 @@ article h3 {
 .formulaire .form fieldset .radio input {
   width: 50px;
 }
-.formulaire .form form button {
+.formulaire .form #loginBtn,
+.formulaire .form #registerBtn {
   margin: auto;
   width: 358px;
   height: 70px;
@@ -332,7 +349,8 @@ article h3 {
   font-size: 20px;
   font-weight: bold;
 }
-.formulaire .form form button:hover {
+.formulaire .form #loginBtn:hover,
+.formulaire .form #registerBtn:hover {
   background-color: #843360;
   border-color: #843360;
   color: #e9f3f9;
@@ -354,7 +372,7 @@ article h3 {
 footer {
   background-color: #174365;
   padding: 10px;
-  color: #ebbd34;
+  color: #e9f3f9;
   font-family: sans-serif;
   font-variant: small-caps;
   text-align: center;

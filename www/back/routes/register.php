@@ -29,6 +29,7 @@ if (isset($_POST["registerSubmit"])) {
         //execute
         $stmt->execute();
         echo "<script>alert(\"Compte bien enregistré !\")</script>";
+        exit;
     }
 }
 ?>
