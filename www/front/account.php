@@ -74,10 +74,13 @@ session_start();
     </main>
     <!-- Footer -->
     <?php include "includes/footer.html" ?>
-</body>
+</body>image.png
 
 </html>
 
 <!------------------------------------ JS ----------------------------------------->
 <script src="assets/js/displayDataUser.js"></script>
 <script src="assets/js/displayNotes.js"></script>
+
+
+
