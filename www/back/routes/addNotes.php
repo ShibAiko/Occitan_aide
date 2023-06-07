@@ -20,6 +20,7 @@ if ($stmt->execute()) {
     echo "<script type='text/javascript'>
         alert('Note ajoutée avec succès!');
         </script>";
+        header('Location: ../../front/account.php');
 } else {
     echo "Erreur lors de l'ajout de la note: " . $stmt->errorInfo()[2];
 }

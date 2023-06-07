@@ -338,6 +338,35 @@ article h3 {
     }
 }
 
+/* ContactList */
+
+#contactContainer section {
+    display: flex;
+    justify-content: space-around;
+}
+.contactList {
+    width: 50%;
+    height: 25vh;
+    overflow: scroll;
+    background-color: white;
+    border: solid 4px #f1bd1a;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+
+    >* {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .contactName {
+        color: #843360;
+        font-weight: normal;
+    }
+    .textNote{
+        padding-right: 1em;
+    }
+}
+
 /* ----- Formulaire ----- */
 .formulaire {
     width: auto;

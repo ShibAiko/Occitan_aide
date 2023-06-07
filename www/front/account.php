@@ -57,6 +57,7 @@ session_start();
         </aside>
         <article id="notesContainer">
             <h3>Notes</h3>
+
             <hr>
             <section>
                 <form action="../back/routes/addNotes.php" method="POST">
@@ -66,7 +67,22 @@ session_start();
                 </form>
                 <div class="notes">
 
-                    <!-- Script display_notes.js -->
+                    <!-- Script displayNotes.js -->
+
+                </div>
+            </section>
+        </article>
+        <article id="contactContainer">
+            <h3>Intervenants</h3>
+            <hr>
+            <section>
+                <div>
+                    <h4>Contact Principal</h4>
+                    <p>Juste Leblanc</p>
+                </div>
+                <div class="contactList">
+
+                    <!-- Script displayIntervenants.js -->
 
                 </div>
             </section>
@@ -74,13 +90,15 @@ session_start();
     </main>
     <!-- Footer -->
     <?php include "includes/footer.html" ?>
-</body>image.png
+</body>
 
 </html>
 
 <!------------------------------------ JS ----------------------------------------->
 <script src="assets/js/displayDataUser.js"></script>
 <script src="assets/js/displayNotes.js"></script>
+<script src="assets/js/displayIntervenants.js"></script>
+
 
 
 

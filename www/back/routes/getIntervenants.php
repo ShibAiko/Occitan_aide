@@ -6,18 +6,18 @@ header ('content-type:application/json');
 $id = $_SESSION['id_utilisateur'];
 if (isset($id)) {
     try {
-        $sql = "SELECT notes.date_note, notes.contenu_note, notes.id_utilisateur, notes.id_auteur , utilisateurs.nom_utilisateur, utilisateurs.prenom_utilisateur 
-                FROM notes
-                INNER JOIN utilisateurs ON notes.id_auteur = utilisateurs.id_utilisateur
-                WHERE notes.id_utilisateur = :id";
+        $sql = "SELECT intervenants.id_intervenant, intervenants.nom_intervenant, intervenants.prenom_intervenant, intervenants.tel_intervenant, intervenants.mail_intervenant, intervenants.is_principal, intervenants.id_utilisateur, intervenants.fonction
+        FROM intervenants
+        INNER JOIN utilisateurs ON intervenants.id_utilisateur = utilisateurs.id_utilisateur
+        WHERE intervenants.id_utilisateur = :id";
         $stmt = $bdd->prepare($sql);
         //BindParam
         $stmt->bindParam(":id", $id); //int
         //Execute
         $stmt->execute();
         // Fetch (récupère )
-        $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode($notes);
+        $intervenants = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($intervenants);
     } catch (PDOException $e) {
         echo json_encode(['error' => "Erreur de base de données : " . $e->getMessage()]);
         exit();
