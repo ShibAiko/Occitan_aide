@@ -24,3 +24,4 @@ if ($stmt->execute()) {
 } else {
     echo "Erreur lors de l'ajout de la note: " . $stmt->errorInfo()[2];
 }
+

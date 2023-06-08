@@ -14,7 +14,13 @@ $myColorLight: #e9f3f9;
 /* ----- General ----- */
 * {
     font-family: sans-serif;
+}
 
+a{
+    color: black;
+}
+a:visited {
+    color: black;
 }
 
 *:focus {
@@ -362,8 +368,9 @@ article h3 {
         color: #843360;
         font-weight: normal;
     }
-    .textNote{
-        padding-right: 1em;
+    .phone{
+        margin: 0;
+        float: right;
     }
 }
 

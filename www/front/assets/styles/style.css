@@ -9,6 +9,14 @@
   font-family: sans-serif;
 }
 
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
 *:focus {
   outline: none;
 }
@@ -314,8 +322,9 @@ article h3 {
   color: #843360;
   font-weight: normal;
 }
-.contactList .textNote {
-  padding-right: 1em;
+.contactList .phone {
+  margin: 0;
+  float: right;
 }
 
 /* ----- Formulaire ----- */

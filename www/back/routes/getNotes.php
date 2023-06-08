@@ -6,10 +6,11 @@ header ('content-type:application/json');
 $id = $_SESSION['id_utilisateur'];
 if (isset($id)) {
     try {
-        $sql = "SELECT notes.date_note, notes.contenu_note, notes.id_utilisateur, notes.id_auteur , utilisateurs.nom_utilisateur, utilisateurs.prenom_utilisateur 
-                FROM notes
-                INNER JOIN utilisateurs ON notes.id_auteur = utilisateurs.id_utilisateur
-                WHERE notes.id_utilisateur = :id";
+        $sql = "SELECT notes.id_note, notes.date_note, notes.contenu_note, notes.id_utilisateur, notes.id_auteur , utilisateurs.nom_utilisateur, utilisateurs.prenom_utilisateur 
+            FROM notes
+            INNER JOIN utilisateurs ON notes.id_auteur = utilisateurs.id_utilisateur
+            WHERE notes.id_utilisateur = :id
+            ORDER BY notes.id_note DESC";
         $stmt = $bdd->prepare($sql);
         //BindParam
         $stmt->bindParam(":id", $id); //int
@@ -23,4 +24,3 @@ if (isset($id)) {
         exit();
     }
 }
-?>
