@@ -2,6 +2,9 @@
 // Connexion à la Bdd
 include "connectBdd.php";
 session_start();
+
+$loginError = '';
+
 //Connexion à un compte ---------------- //
 if (isset($_POST["logInSubmit"])) {
     //récupère du formulaire
@@ -19,7 +22,7 @@ if (isset($_POST["logInSubmit"])) {
     //Vérifie si l'utilisateur existe et si le mot de passe correspond
     if($utilisateur === false OR $utilisateur === null OR !password_verify($password, $utilisateur['password_utilisateur'])){
         //Erreur utilisateur non trouvé
-        $registerError['loginError'] = true;
+        $loginError = "Identifiant ou mot de passe incorrect.";
     } else {
         //stocke les données utilisateur 
         $_SESSION['id_utilisateur'] = $utilisateur['id_utilisateur'];

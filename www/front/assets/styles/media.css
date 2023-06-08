@@ -14,7 +14,24 @@
     width: auto;
   }
   /* ----- Aside ----- */
+  .patientResume {
+    flex-direction: column;
+  }
   /* ----- Main ----- */
+  /*----- Notes -----*/
+  #notesContainer section {
+    flex-direction: column-reverse;
+  }
+  .notes {
+    width: auto;
+  }
+  /*----- ContactList -----*/
+  #contactContainer section {
+    flex-direction: column;
+  }
+  .contactList {
+    width: auto;
+  }
   /* ----- Formulaire ----- */
   .formulaire h2 {
     margin: 1em auto;

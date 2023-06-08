@@ -9,6 +9,7 @@ logBtn.addEventListener("click", () => {
     main.innerHTML = `
         <div class="formulaire">
         <h2>CONNEXION / INSCRIPTION</h2>
+
         <div class="form ">
             <form class="login_form" method="POST" name="submit" action="../back/routes/login.php">
                 <fieldset>
