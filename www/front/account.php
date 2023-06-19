@@ -98,7 +98,3 @@ session_start();
 <script src="assets/js/displayDataUser.js"></script>
 <script src="assets/js/displayNotes.js"></script>
 <script src="assets/js/displayIntervenants.js"></script>
-
-
-
-

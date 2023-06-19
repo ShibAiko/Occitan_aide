@@ -18,6 +18,9 @@
     flex-direction: column;
   }
   /* ----- Main ----- */
+  article * {
+    margin: 0.5em;
+  }
   /*----- Notes -----*/
   #notesContainer section {
     flex-direction: column-reverse;
