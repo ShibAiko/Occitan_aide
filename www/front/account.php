@@ -62,7 +62,7 @@ session_start();
             <section>
                 <form action="../back/routes/addNotes.php" method="POST">
                     <label for="addNotes">Ajouter une note</label> <!-- La note s'ajoute avec la date du jour et le nom du profil de la personne qui l'écrit -->
-                    <textarea id=addNotes name="addNotes" rows="5" cols="33"></textarea>
+                    <textarea id=addNotes name="addNotes" rows="10" cols="50"></textarea>
                     <input type="submit" value="Ajouter">
                 </form>
                 <div class="notes">

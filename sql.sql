@@ -11,9 +11,9 @@ CREATE TABLE utilisateurs(
 CREATE TABLE notes (
     id_note INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     date_note DATE NOT NULL,
-    acontenu_note TEXT NOT NULL,
+    contenu_note TEXT NOT NULL,
     utilisateur_concerne INT NOT NULL,
-    auteur_note INT NOT NULL
+    auteur_note INT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE notes
